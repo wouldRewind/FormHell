@@ -6,3 +6,30 @@ color: #FFFFFF;
 background-color: transparent;
 cursor: pointer;
 }
+#material{
+    background: linear-gradient(180deg, #F8F8F8 0%, rgba(243, 243, 243, 0) 100%, #F2F2F2 100%);
+    border: 1px solid #C98E99;
+    box-sizing: border-box;
+    box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    padding: 0.95rem;
+    width: 100%;
+    position: relative;
+   &::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    display: block;
+    background-color: #000;
+   }
+}
+#continue{
+    padding-top: 13px;
+    padding-bottom: 16px;
+    padding-left: 37px;
+    padding-right: 57px;
+    color: white;
+}
+.field-form.checkboxed{
+}

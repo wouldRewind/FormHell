@@ -23,3 +23,22 @@ html{
 input::placeholder{
     color: #838383;
 }
+.button{
+    background: linear-gradient(180deg, #818387 0%, #696B6F 100%);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+.decor{
+    clip-path: polygon(0% 0%, 80% 0%,100% 50%,80% 100%,0% 100%);
+}
+button.pressed{
+    background: linear-gradient(0deg, #256FCA, #256FCA);
+}
+button.active{
+    background: linear-gradient(180deg, #4892EC 0%, #2F79D4 100%);
+}
+// навести на кнопку можно лишь когда она активна
+button.active.hover{ 
+    background: linear-gradient(0deg, #3E8FF2, #3E8FF2);
+}
