@@ -1,0 +1,16 @@
+@import "./inputs";
+.form{
+    background-color: #fff;
+    padding: 2.4375rem 5.625rem 3.375rem 5.625rem;
+    &-field{
+        margin-bottom: 1rem;
+        &__label{
+            font-size: 1.125rem;
+            margin-bottom: 0.9rem;
+            display: block;
+        }
+        &__meters{
+            margin-left: 0.875rem;
+        }
+    }
+}

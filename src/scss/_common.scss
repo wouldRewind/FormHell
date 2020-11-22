@@ -1,6 +1,7 @@
 html{
     font-size: 100%;
     font-family: "Open sans","sans-serif";
+    color: #323232;
 }
 .container{
     display: flex;
@@ -15,5 +16,10 @@ html{
     color: #2F79D4;
 }
 .title{
-
+    font-size: 1.625rem;
+    margin: 0 auto;
+    margin-bottom: 1.875rem;
+}
+input::placeholder{
+    color: #838383;
 }

@@ -1,0 +1,20 @@
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.input{
+    background: linear-gradient(180deg, #F8F8F8 0%, rgba(243, 243, 243, 0) 100%, #F2F2F2 100%);
+    border: 1px solid #C98E99;
+    box-sizing: border-box;
+    box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    padding: 15px;
+}
+.valid{
+    margin-left: 1.625rem;
+}
+.invalid{
+    display: block;
+    font-size: 13px;
+    color: #C98E99;
+}
