@@ -1,0 +1,17 @@
+.success{
+    padding: 2.70rem;
+    text-align: center;
+    background-color: #ffffff;
+    & > *:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+    &__name{
+        display: block;
+    }
+    &__mail{
+        display: block;
+    }
+    &__phone{
+        display: block;
+    }
+}

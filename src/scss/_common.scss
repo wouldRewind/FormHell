@@ -1,0 +1,19 @@
+html{
+    font-size: 100%;
+    font-family: "Open sans","sans-serif";
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(../assets/bg.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.emphasized{
+    color: #2F79D4;
+}
+.title{
+
+}
