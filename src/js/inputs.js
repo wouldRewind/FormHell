@@ -11,13 +11,13 @@ export function addMasks()
             "A": { pattern: /[\w@\-.+]/, recursive: true }
         }
     });
-    // $('input[type=number]').mask('ZZZ', {
-    //     translation: {
-    //       'Z': {
-    //         pattern: /[0-9]/, optional: true
-    //       }
-    //     }
-    // })
+    $('input[type=number]').mask('ZZZ', {
+        translation: {
+          'Z': {
+            pattern: /[0-9]/, optional: true
+          }
+        }
+    })
     $('input[type=text]').mask("АААААААААААА", {
         translation: {
           'А': {
