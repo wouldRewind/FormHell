@@ -3,10 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Test task</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/css/style.min.css">
+    <!-- <link  href="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js"> -->
 </head>
 <body>
-    <h1 class="title">Заголовок страницы!</h1>
+    <div class="container">
+        <div class="box">
+            <button id="nav" type="button">Кнопка навигации</button>
+
+            <form novalidate class="form" id="order" action="">
+                <h1 class="form__title title">Заказать забор</h1>
+                <div class="form-field">
+                    <label for="len" class="form-field__label">Длинна забора</label>
+                    <input class="form-field__input input" type="number" name="len" id="len" placeholder="0">
+                    <span class="form-field__meters" id="lenDisp">метров</span>
+                    <img class="valid" src="./src/assets/check (1).png" alt="">
+                    <span class="invalid">Неверно заполнено поле</span>
+                </div>
+                <div class="form-field">
+                    <label for="hi" class="form-field__label">Высота забора</label>
+                    <input class="form-field__input input" type="number" name="hi" id="hi" maxlength="5" placeholder="0">
+                    <span class="form-field__meters" id="hiDisp">метров</span>
+                    <img class="valid" src="./src/assets/check (1).png" alt="">
+                    <span class="invalid">Неверно заполнено поле</span>
+                </div>
+                <div class="form-field">
+                    <label for="material" class="form-field__label">Материал забора</label>
+                    <select name="material" id="material">
+                        <option value="400">Профнастил 400 Р за м²</option>
+                        <option value="500">Модули 500 Р за м²</option>
+                        <option value="700">Бетон 700 Р за м²</option>
+                        <option value="200">Сетка 200 Р за м²</option>
+                    </select>
+                </div>
+                <div class="form-field checkboxed">
+                    <label for="montage"><input type="checkbox" name="montage" id="montage">Нужен монтаж</label>
+                </div>
+                <div class="form-field">
+                    Сумма заказа: <span class="form-field__sum"><span class="sum">0</span> Р</span>
+                </div>
+                <button class="button decor" id="continue" type="button">Далее</button>
+            </form>
+
+
+
+
+            <!-- <form id="contacts" class="form" novalidate action="">
+                <h1 class="form__title title">Пожалуйста, представьтесь</h1>
+                <div class="form-field">
+                    <label class="form-field__label" for="name">Ваше имя</label>
+                    <input class="input input_stretch" name="name" id="name" type="text">
+                </div>
+                <div class="form-field">
+                    <label class="form-field__label" for="mail">Электронная почта</label>
+                    <input class="input input_stretch" name="mail" id="mail" placeholder="yourmail@mail.ru" type="email">
+                </div>
+                <div class="form-field">
+                    <label class="form-field__label" for="phone">Телефон</label>
+                    <input value="" class="input input_stretch" name="phone" placeholder="+7 (___) ___ - __ - __" id="phone">
+                </div>
+                <div class="form-field">
+                    Вы укомплектовали забор <span class="emphasized">длинной <span id="length">6</span> метров</span> и 
+                    <span class="emphasized">высотой <span id="height">2</span> метров</span> высотой 2 метра из материала профнастил на сумму <span class="sum emphasized"><span class="form-field__sum"> <span class="">8 400</span> Р</span></span>
+                </div>
+                <button type="button" class="button">Отправить</button>
+            </form> -->
+
+
+
+            <!-- <div class="success">
+                <h1 class="success__title title"><span class="success__name">Татьяна,</span>заказ <span class="success__number emphasized">№ 8675</span> сформирован!</h1>
+                <p class="success__text">Мы повторили его комплектацию на почту <span class="success__mail emphasized">mail@mail.ru</span></p>
+                <p class="success__text">В ближайшее время наш специалист свяжется с вами по телефону <span class="success__phone emphasized">+7 (917) 111-22-33</span></p>
+            </div> -->
+        </div>
+    </div>
+    <script
+  src="http://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+  <script src="./src/js/jquery.mask.min.js"></script>
+    <script src="./src/js/index.js" type="module"></script>
 </body>
+
+
+
+
+<form action=""></form>
 </html>
