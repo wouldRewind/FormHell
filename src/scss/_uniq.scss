@@ -30,9 +30,17 @@ cursor: pointer;
     padding-left: 37px;
     padding-right: 57px;
     color: white;
+    transition: .3s;
 }
 .field-form.checkboxed{
 }
 #contacts
 {
+}
+#montage{
+    margin-right: 10px;
+}
+#hiDisp,#lenDisp{
+    display: inline-block;
+    width: 60px;
 }
