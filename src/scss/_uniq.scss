@@ -5,6 +5,17 @@ text-decoration-line: underline;
 color: #FFFFFF;
 background-color: transparent;
 cursor: pointer;
+position: relative;
+left: 3%;
+&::after{
+    content: "";
+    position: absolute;
+    left: -25%;
+    background: url(../assets/Shape.png);
+    width: 14px;
+    height: 10px;
+    top: 15%;
+}
 }
 #material{
     background: linear-gradient(180deg, #F8F8F8 0%, rgba(243, 243, 243, 0) 100%, #F2F2F2 100%);

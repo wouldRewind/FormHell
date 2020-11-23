@@ -13,6 +13,10 @@ const phoneError = document.getElementById("phoneError")
 const nameAccess = document.getElementById("nameAccess")
 const nameError = document.getElementById("nameError")
 
+const navBtn = document.getElementById("nav");
+
+const success = document.querySelector(".success")
+
 const minLen = 5;
 const checkForValid = () =>
 {
@@ -21,6 +25,9 @@ const checkForValid = () =>
    && mailAccess.classList.contains("visible"))
    {
        sendBtn.classList.add("active")
+   }
+   else{
+    sendBtn.classList.remove("active")
    }
 }
 
@@ -64,4 +71,20 @@ phone.addEventListener("input",function()
         phoneError.classList.add("visible")
     }
     checkForValid()
+})
+
+navBtn.addEventListener("click",function()
+{
+    orderForm.classList.remove("hidden");
+    contactForm.classList.add("hidden")
+    navBtn.classList.add("hidden")
+})
+
+sendBtn.addEventListener("click",function()
+{
+    if(sendBtn.classList.contains("active"))
+    {
+        contactForm.classList.add("hidden")
+        success.classList.remove("hidden")
+    }
 })

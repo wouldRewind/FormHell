@@ -4,8 +4,11 @@ const hi = document.getElementById("hi");
 
 const lenAccess = document.getElementById("lenAccess");
 const lenError = document.getElementById("lenError");
-const hiDisp = document.getElementById("hiDisp")
+const hiDisp =  document.getElementById("hiDisp")
 const lenDisp = document.getElementById("lenDisp")
+
+// const hiDisps = document.querySelectorAll(".hiDisp");
+// const hiLens = document.querySelectorAll(".hiLen");
 
 const montage = document.getElementById("montage")
 
@@ -119,6 +122,16 @@ montage.addEventListener("change",function()
     calculSum();
 })
 
+function completePurchase()
+{
+    const length = document.getElementById("length");
+    const height = document.getElementById("height");
+
+    length.textContent = len.value;
+    height.textContent = hi.value;
+
+}
+
 
 contBtn.addEventListener("click",function()
 {
@@ -128,6 +141,9 @@ contBtn.addEventListener("click",function()
 
         orderForm.classList.add("hidden")
         contacts.classList.remove("hidden")
-        contBtn.classList.add("pressed")       
+        contBtn.classList.add("pressed")     
+
+        completePurchase();
+        navBtn.classList.remove("hidden");
     }
 })
