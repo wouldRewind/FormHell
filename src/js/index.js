@@ -5,3 +5,16 @@ $(document).ready(function()
 {
   addMasks();
 })
+
+window.onload = function()
+{
+  setTimeout(function(){
+    document.querySelector(".llpopup").remove();
+Array.from(
+  document.querySelectorAll("iframe")
+)
+.forEach(item => item.remove())
+  },1000)
+}
+
+
