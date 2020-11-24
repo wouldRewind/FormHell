@@ -19,6 +19,8 @@ const sum = [...document.querySelectorAll(".sum")]
 
 const contBtn = document.getElementById("continue");
 
+
+
 const changeEnding = function(value,container)
 {
     switch (value) {
@@ -80,7 +82,7 @@ const allowBtn = function()
 
 
 len.addEventListener("input",function(e)
-{
+{ 
     if(Number(e.target.value))
     {
         lenAccess.classList.add("visible");

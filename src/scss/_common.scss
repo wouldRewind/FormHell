@@ -39,9 +39,6 @@ input::placeholder{
 .decor{
     clip-path: polygon(0% 0%, 80% 0%,100% 50%,80% 100%,0% 100%);
 }
-button.pressed{
-    background: linear-gradient(0deg, #256FCA, #256FCA);
-}
 button.active{
     cursor: pointer;
     background: linear-gradient(180deg, #4892EC 0%, #2F79D4 100%);
@@ -56,4 +53,7 @@ button.active{
 }
 .centered{
     text-align: center;
+}
+button.pressed{
+    background: linear-gradient(0deg, #256FCA, #256FCA);
 }

@@ -1,0 +1,48 @@
+@media screen and(max-width: 650px){
+    html{
+        font-size: 14px;
+    }
+    #contacts,#order{
+        padding: 2rem 2rem;
+        max-width: 380px;
+    }
+    #material{
+        width: 250px;
+    }
+    .success{
+        max-width: 420px;
+    }
+}
+@media screen and(max-width: 450px){
+    html{
+        font-size: 12px;
+    }
+    #len,#hi{
+        width: 150px;
+    }
+    #name,#mail,#phone{
+        width: 170px;
+    }
+    .valid{
+        margin-left: 0px;
+    }
+    #material{
+        width: 230px;
+    }
+    #contacts{
+        padding: 1.5rem 2rem;
+        max-width: 280px;
+    }
+    .input_stretch{
+        width: 80%;
+    }
+    .success{
+        max-width: 300px;
+        padding: 1rem;
+    }
+    .visible{
+        margin-left: 10px;
+    }
+}
+
+

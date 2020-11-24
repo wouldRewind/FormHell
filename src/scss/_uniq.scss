@@ -1,5 +1,5 @@
 // Стилизация уникальных элементов страницы
-#nav{
+.nav-btn{
 font-size: 13px;
 text-decoration-line: underline;
 color: #FFFFFF;
@@ -54,4 +54,28 @@ left: 3%;
 #hiDisp,#lenDisp{
     display: inline-block;
     width: 60px;
+}
+
+#close{
+    margin-left: auto;
+    &::after{
+        content: "";
+        background: none;
+        width: 0;
+        height: 0;
+    }
+}
+.close-wrap{
+    text-align: right;
+}
+#material{
+    position: relative;
+    appearance: none;
+    &::after{
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-color: red;
+        position: absolute;
+    }
 }
