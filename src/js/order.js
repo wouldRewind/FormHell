@@ -7,6 +7,9 @@ const lenError = document.getElementById("lenError");
 const hiDisp =  document.getElementById("hiDisp")
 const lenDisp = document.getElementById("lenDisp")
 
+const lenDisps = Array.from(document.querySelectorAll(".lenDisp"))
+const hiDisps = Array.from(document.querySelectorAll(".hiDisp"))
+
 // const hiDisps = document.querySelectorAll(".hiDisp");
 // const hiLens = document.querySelectorAll(".hiLen");
 
@@ -23,41 +26,50 @@ const contBtn = document.getElementById("continue");
 
 const changeEnding = function(value,container)
 {
-    switch (value) {
-        case 1:
-        container.textContent = "метр"    
-            break;
-        case 2:
-            container.textContent = "метра"
-            break;
-        case 3:
-            container.textContent = "метра"
-            break;
-        case 4:
-            container.textContent = "метра"
-            break;
-        case 5:
-            container.textContent = "метров"
-            break;
-        case 6:
-            container.textContent = "метров"
-            break;
-        case 7:
-            container.textContent = "метров"
-            break;
-        case 8:
-            container.textContent = "метров"
-            break;
-        case 9:
-            container.textContent = "метров"
-            break;
-        default:
-            container.textContent = "метров"
-            break;
+    //lenDisp, hiDisp
+    const lastTwo = value % 100;
+    const lastDigit = value % 10;
+    if(lastTwo > 10 && lastTwo < 20)
+    container.forEach(item => item.textContent = "метров" )
+    else{
+        switch (lastDigit) {
+            case 1:
+                container.forEach(item => item.textContent = "метр" )
+                break;
+            case 2:
+                container.forEach(item => item.textContent = "метра" )
+                break;
+            case 3:
+                container.forEach(item => item.textContent = "метра" )
+                break;
+            case 4:
+                container.forEach(item => item.textContent = "метра" )
+                break;
+            case 5:
+                container.forEach(item => item.textContent = "метров" )
+                break;
+            case 6:
+                container.forEach(item => item.textContent = "метров" )
+                break;
+            case 7:
+                container.forEach(item => item.textContent = "метров" )
+                break;
+            case 8:
+                container.forEach(item => item.textContent = "метров" )
+                break;
+            case 9:
+                container.forEach(item => item.textContent = "метров" )
+                break;
+            default:
+                container.forEach(item => item.textContent = "метров" )
+                break;
+        }
     }
+    
 }
 
 const material = document.getElementById("material")
+
 
 
 const calculSum = function()
@@ -93,7 +105,7 @@ len.addEventListener("input",function(e)
         lenError.classList.add("visible")
     }
     allowBtn();
-    changeEnding(e.target.value % 10,lenDisp)
+    changeEnding(e.target.value,lenDisps)
     calculSum()
     
 });
@@ -110,7 +122,7 @@ hi.addEventListener("input",function(e)
         hiError.classList.add("visible")
     }
     allowBtn()
-    changeEnding(e.target.value % 10,hiDisp)
+    changeEnding(e.target.value,hiDisps)
     calculSum()
 
 });
@@ -135,11 +147,29 @@ function completePurchase()
 }
 
 
-contBtn.addEventListener("click",function()
+contBtn.addEventListener("click",function(e)
 {
     if(contBtn.classList.contains("active"))
     {
         const contacts = document.getElementById("contacts");
+        
+        const mat = document.getElementById("mat");
+        switch (+material.value) {
+            case 200:
+                mat.textContent = "сетка";
+                break;
+            case 400:
+                mat.textContent = "профнастил";
+                break;
+            case 700:
+                mat.textContent = "бетон";
+                break;
+            case 500:
+                mat.textContent = "модули"
+                break;
+            default:
+                break;
+        }
 
         orderForm.classList.add("hidden")
         contacts.classList.remove("hidden")
@@ -148,4 +178,6 @@ contBtn.addEventListener("click",function()
         completePurchase();
         navBtn.classList.remove("hidden");
     }
+    else 
+        e.preventDefault();
 })

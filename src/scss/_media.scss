@@ -13,7 +13,10 @@
         max-width: 420px;
     }
 }
-@media screen and(max-width: 450px){
+@media screen and(max-width: 445px){
+    #send{
+        padding: 10px 20px;
+    }
     html{
         font-size: 12px;
     }

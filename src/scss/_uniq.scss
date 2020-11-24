@@ -70,7 +70,6 @@ left: 3%;
 }
 #material{
     position: relative;
-    appearance: none;
     &::after{
         content: "";
         width: 10px;
